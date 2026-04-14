@@ -6,7 +6,7 @@
     --color-white: #fff;
     --color-indigo-100: oklch(93% 0.034 272.788);
     --color-slate-500: oklch(55.4% 0.046 257.417);
-    
+    --color-slate-900: oklch(20.8% 0.042 265.755)
 }
 body {
     margin: 0;
@@ -74,14 +74,25 @@ html {
 
 .hero-small-bar {
     background-color: var(--color-indigo-100);
-    width: 200px;
+    width: 250px;
     text-align: center;
-
+    border-radius: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: var(--color-indigo-600);
+    font-weight: bold;
+    gap: 5px;
 }
 
 .hero-text-big {
     font-size: 50px;
     font-weight: bold;
+}
+
+.hero-text-big-colored {
+    color: var(--color-indigo-600);
+    
 }
 
 .hero-text-secondary {
@@ -105,17 +116,26 @@ html {
 }
 .hero-list-one-data p {
     margin-left: 5px;
+    font-weight: bold;
 }
+.hero-list-one-data img {
+   color: var(--color-indigo-600);
+}
+
 .hero-list-two-data {
     display: flex;
 }
 .hero-list-two-data p {
     margin-left: 5px;
+    font-weight: bold;
+}
+.hero-list-two-data img {
+    color: var(--color-indigo-600);
 }
 
 .hero-button-container {
     display: flex;
-    gap: 30px;
+    gap: 10px;
 }
 
 .hero-button-left {
@@ -137,15 +157,26 @@ html {
     align-items: center;
     display: flex;
     align-items:center;
+    gap: 5px;
 }
 
 
 .hero-main-image-container {
     position: relative;
+    background: #9810FA;
+    background: linear-gradient(90deg,rgba(152, 16, 250, 0.7) 0%, rgba(97, 95, 255, 0.7) 100%);
+    border-radius: 30px;
+    opacity: 100%;
+    
 }
 
 .hero-main-image {
     border-radius: 30px;
+    color: var(--color-indigo-600);
+    z-index: -1;
+    display: block;
+    position: relative;
+    
 }
 
 .hero-main-image-center {
@@ -155,10 +186,19 @@ html {
     top: 45%;
     left: 45%;
     border-radius: 10px;
+    border-color: var(--color-white);
+    border-width: 1px;
     opacity: 90%;
+    background: #9810FA;
+    background: linear-gradient(90deg,rgba(152, 16, 250, 0.7) 0%, rgba(97, 95, 255, 0.7) 100%);
+    color: var(--color-white);
 }
 
 .hero-main-image-center-images {
     display: flex;
     justify-content: center;
+}
+
+.video-section {
+    background-color: var(--color-slate-900);
 }
