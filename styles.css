@@ -8,7 +8,9 @@
     --color-slate-500: oklch(55.4% 0.046 257.417);
     --color-slate-900: oklch(20.8% 0.042 265.755);
     --color-slate-400: oklch(70.4% 0.04 256.788);
-    --color-slate-50: oklch(98.4% 0.003 247.858)
+    --color-slate-50: oklch(98.4% 0.003 247.858);
+    --color-slate-200: oklch(92.9% 0.013 255.508);
+    --color-slate-600: oklch(44.6% 0.043 257.281);
 }
 body {
     margin: 0;
@@ -86,6 +88,11 @@ html {
     color: var(--color-indigo-600);
     font-weight: bold;
     gap: 5px;
+}
+
+.hero-small-bar-image {
+    color: var(--color-indigo-600);
+    fill: var(--color-indigo-600);
 }
 
 .hero-text-big {
@@ -240,34 +247,88 @@ html {
 .accordeon-section {
     background-color: var(--color-slate-50);
     text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.accordeon-toptext {
+    margin-bottom: 45px;
 }
 
 .accordion {
-    background-color: #eee;
+    background-color: var(--color-white);
     color: #444;
-    cursor: pointer;
     padding: 18px;
     width: 100%;
     text-align: left;
     border: none;
     outline: none;
     transition: 0.4s;
-  }
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.accordeon-inner {
+    padding: 30px;
+    background-color: var(--color-white);
+    color: #444;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.accordeon-line {
+    height: 1px;
+    background-color: var(--color-slate-200);
+}
   
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .accordion:hover {
-    background-color: #ccc;
-  }
+.active-acc, .accordion:hover {
+    color: var(--color-indigo-600);
+}
   
   /* Style the accordion panel. Note: hidden by default */
-  .accordion-panel {
+.accordion-panel {
     padding: 0 18px;
     background-color: white;
     display: none;
     overflow: hidden;
-  }
+    transition: max-height 0.2s ease-out;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    color: var(--color-slate-600);
+}
 
-  .footer {
+.accordion:after {
+    content: url(Arrow.svg) ; /* Unicode character for "plus" sign (+) \02795 */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+.active-acc:after {
+    content: ""; /* Unicode character for "minus" sign (-) \2796 */
+}
+
+
+
+
+
+.footer {
     background-color: var(--color-slate-900);
     color: var(--color-slate-400);
     display: flex;
@@ -275,29 +336,29 @@ html {
     align-items: center;
     padding-top: 35px;
     padding-bottom: 35px;
-  }
+}
 
-  .logo-footer {
+.logo-footer {
     display: flex;
     gap: 10px;
     align-items: center;
     font-weight: bold;
     color: var(--color-slate-50);
-  }
+}
 
-  .footer-info {
+.footer-info {
     display: flex;
     gap: 40px;
     transition: 0.2s;
-  }
+}
 
-  .footer-info a {
+.footer-info a {
     text-decoration: none;
     color: var(--color-slate-400);;
-  }
+}
 
-  .footer-info a:hover {
+.footer-info a:hover {
     text-decoration: none;
     color: var(--color-slate-50);
     transition: 0.2s;
-  }
+}
