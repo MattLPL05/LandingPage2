@@ -266,3 +266,38 @@ html {
     display: none;
     overflow: hidden;
   }
+
+  .footer {
+    background-color: var(--color-slate-900);
+    color: var(--color-slate-400);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  .logo-footer {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: bold;
+    color: var(--color-slate-50);
+  }
+
+  .footer-info {
+    display: flex;
+    gap: 40px;
+    transition: 0.2s;
+  }
+
+  .footer-info a {
+    text-decoration: none;
+    color: var(--color-slate-400);;
+  }
+
+  .footer-info a:hover {
+    text-decoration: none;
+    color: var(--color-slate-50);
+    transition: 0.2s;
+  }
