@@ -11,6 +11,7 @@
     --color-slate-50: oklch(98.4% 0.003 247.858);
     --color-slate-200: oklch(92.9% 0.013 255.508);
     --color-slate-600: oklch(44.6% 0.043 257.281);
+    --color-indigo-filter: brightness(0) saturate(100%) invert(26%) sepia(82%) saturate(6988%) hue-rotate(247deg) brightness(98%) contrast(97%);
 }
 body {
     margin: 0;
@@ -21,6 +22,16 @@ body {
 html {
     margin: 0;
 }
+
+@keyframes rotate-arrow {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(180deg);}
+    }
+
+@keyframes rotate-arrow-reverse {
+    0%   {transform: rotate(180deg);}
+    100% {transform: rotate(0deg);}
+    }
 
 
 .nav-bar {
@@ -93,6 +104,7 @@ html {
 .hero-small-bar-image {
     color: var(--color-indigo-600);
     fill: var(--color-indigo-600);
+    filter: brightness(0) saturate(100%) invert(26%) sepia(82%) saturate(6988%) hue-rotate(247deg) brightness(98%) contrast(97%);
 }
 
 .hero-text-big {
@@ -107,6 +119,7 @@ html {
 
 .hero-text-secondary {
     font-size: 20px;
+    color: var(--color-slate-600);
 }
 
 .hero-list-one li {
@@ -208,6 +221,7 @@ html {
 .hero-main-image-center-images {
     display: flex;
     justify-content: center;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(11deg) brightness(106%) contrast(101%);;
 }
 
 .video-section {
@@ -252,6 +266,10 @@ html {
     
 }
 
+.gallery-text p {
+    color: var(--color-slate-600);
+}
+
 .gallery-category {
     text-align: center;
     padding: 15px;
@@ -268,6 +286,43 @@ html {
     border-radius: 10px;
 }
 
+.gallery-image {
+    border-radius: 30px;
+    max-width: 550px;
+}
+
+.gallery-image-hover {
+    position: absolute;
+    top: 190px;
+    right: 40px;
+}
+
+.gallery-image-wrapper {
+    position: relative;
+}
+
+.gallery-picture-set-container {
+    display: grid;
+    gap:10px;
+    grid-template-columns: repeat(2, 1fr); /* how wide */
+    grid-template-rows: repeat(3, 1fr); /* how long */
+    align-items: center;
+    justify-items: center;
+    margin-top: 35px;
+    position: relative;
+}
+
+.gallery-image-container-inner:hover {
+
+}
+
+.gallery-image-text-title {
+    font-weight: bold;
+}
+
+.gallery-image-text-description {
+    color: var(--color-slate-500);
+}
 
 
 .accordeon-section {
@@ -322,14 +377,15 @@ html {
   /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active-acc, .accordion:hover {
     color: var(--color-indigo-600);
+    
 }
   
   /* Style the accordion panel. Note: hidden by default */
 .accordion-panel {
     padding: 0 18px;
     background-color: white;
-    display: none;
     overflow: hidden;
+    max-height: 0;
     transition: max-height 0.2s ease-out;
     width: 90%;
     margin-left: auto;
@@ -344,10 +400,18 @@ html {
     color: #777;
     float: right;
     margin-left: 5px;
+    animation-name: rotate-arrow-reverse;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards ;
+    
   }
   
 .active-acc:after {
-    content: ""; /* Unicode character for "minus" sign (-) \2796 */
+    content: url(Arrow.svg); /* Unicode character for "minus" sign (-) \2796 */
+    filter: var(--color-indigo-filter);
+    animation-name: rotate-arrow;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards ;
 }
 
 
