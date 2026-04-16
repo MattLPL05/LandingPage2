@@ -177,6 +177,7 @@ html {
     background: linear-gradient(90deg,rgba(152, 16, 250, 0.7) 0%, rgba(97, 95, 255, 0.7) 100%);
     border-radius: 30px;
     opacity: 100%;
+    margin-right: var(--general-margin);
     
 }
 
@@ -239,7 +240,33 @@ html {
     box-shadow: 0px 0px 12px 9px rgba(88, 80, 206, 0.25);
 }
 
+.gallery-section {
+    margin-left: var(--general-margin);
+    margin-right: var(--general-margin);
+}
 
+.gallery-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+
+.gallery-category {
+    text-align: center;
+    padding: 15px;
+}
+
+.gallery-option-selections-container {
+    display: flex;
+    gap: 10px;
+}
+
+.gallery-category-active {
+    background-color: var(--color-slate-200);
+    padding: 15px;
+    border-radius: 10px;
+}
 
 
 

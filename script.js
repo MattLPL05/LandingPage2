@@ -23,5 +23,4 @@ function primaryJSLoader()
 }
 
 
-console.log("e");
 document.addEventListener("DOMContentLoaded", primaryJSLoader);
