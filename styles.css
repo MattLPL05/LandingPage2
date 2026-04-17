@@ -23,6 +23,10 @@ html {
     margin: 0;
 }
 
+div, section {
+    box-sizing: border-box;
+}
+
 @keyframes rotate-arrow {
     0%   {transform: rotate(0deg);}
     100% {transform: rotate(180deg);}
@@ -33,8 +37,26 @@ html {
     100% {transform: rotate(0deg);}
     }
 
+#progress-bar {
+    width: 100%;
+}
+      
+#le-bar {
+    width: 1%;
+    height: 5px;
+    background-color: var(--color-indigo-600);
+}
 
 .nav-bar {
+    position: fixed;
+    width: 100%;
+    background-color: var(--color-white);
+    top: 0;
+    z-index: 10;
+    opacity: 99%;
+    padding-bottom: 15px;
+}
+.nav-inner-bar {
     display: flex;
     margin-top: 15px;
     margin-left: var(--general-margin);
@@ -84,7 +106,7 @@ html {
 .main-hero {
     display: flex;
     margin-left: var(--general-margin);
-    margin-top: 35px;
+    margin-top: 165px;
     margin-bottom: 75px;
 }
 
