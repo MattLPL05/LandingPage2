@@ -12,6 +12,8 @@
     --color-slate-200: oklch(92.9% 0.013 255.508);
     --color-slate-600: oklch(44.6% 0.043 257.281);
     --color-indigo-filter: brightness(0) saturate(100%) invert(26%) sepia(82%) saturate(6988%) hue-rotate(247deg) brightness(98%) contrast(97%);
+    --color-filter-image: rgba(79, 57, 246, 0.3);
+    --gallery-image-radius: 30px;
 }
 body {
     margin: 0;
@@ -319,20 +321,12 @@ div, section {
 }
 
 .gallery-image {
-    border-radius: 30px;
+    border-radius: var(--gallery-image-radius);
     max-width: 550px;
+    position: relative;
+    overflow: hidden;
 }
 
-
-
-
-.gallery-image:hover {
-    background: linear-gradient(90deg,rgba(152, 16, 250, 0.7) 0%, rgba(97, 95, 255, 0.7) 100%);
-}
-
-.gallery-image-hover {
-    filter: var(--color-indigo-filter);
-}
 
 .gallery-image-hover-background {
     background-color: var(--color-white);
@@ -342,11 +336,9 @@ div, section {
     padding: 15px;
     border-radius: 100%;
     display: none;
+    overflow: hidden;
 }
 
-.gallery-image-hover-background:hover {
-    display: block;
-}
 
 .gallery-image-wrapper {
     position: relative;
@@ -367,9 +359,41 @@ div, section {
 .gallery-image-container-inner:hover {
     transform: translateY(-15px); /* moves the element 30px along the y-axis */
     transition: 0.2s;
-    
-
+    cursor: pointer;
 }
+
+.gallery-image-container-inner:hover .gallery-image-hover-effect {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: var(--color-filter-image);
+    border-radius: var(--gallery-image-radius);
+    
+}
+
+.gallery-image-container-inner:hover .gallery-image-hover-background {
+    display: block;
+    transition: 0.2s;
+}
+
+.gallery-image-container-inner:hover .gallery-image-hover {
+    filter: var(--color-indigo-filter);
+    
+}
+.gallery-image-container-inner:hover .gallery-image {
+    scale: 1.1; 
+   
+    overflow: hidden;
+}
+
+.gallery-image-picture-wrapper {
+    overflow: hidden;
+    border-radius: var(--gallery-image-radius);
+}
+
+
 
 .gallery-image-text-title {
     font-weight: bold;

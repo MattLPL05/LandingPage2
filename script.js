@@ -2,6 +2,8 @@
 
 function primaryJSLoader()
 {
+
+    //accordeon
     var acc = document.getElementsByClassName("accordion");
     var i;
 
@@ -36,7 +38,7 @@ function primaryJSLoader()
         });
       }
 
-
+      //progress scroll (on top of the nav bar)
       window.onscroll = function() {myFunction()};
 
       function myFunction() {
@@ -45,6 +47,20 @@ function primaryJSLoader()
         var scrolled = (winScroll / height) * 100;
         document.getElementById("le-bar").style.width = scrolled + "%";
       }
+
+
+      //gallery image handling
+
+    var Pics = document.getElementsByClassName("gallery-image-container-inner");
+    var Piclogs = Array.from(Pics)
+
+    console.log(Piclogs)
+    Piclogs.forEach(element => {
+      console.log(element);
+      element.addEventListener(`click`, event => {
+        console.log("e");
+      });
+    });
 }
 
 
