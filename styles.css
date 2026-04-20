@@ -134,6 +134,8 @@ div, section {
 .hero-text-big {
     font-size: 50px;
     font-weight: bold;
+    max-width: 90%;
+    text-wrap: wrap;
 }
 
 .hero-text-big-colored {
@@ -318,6 +320,7 @@ div, section {
     padding: 15px;
     border-radius: 10px;
     color: var(--color-slate-600);
+    transition: 0.3s;
 }
 
 .gallery-image {
@@ -325,6 +328,7 @@ div, section {
     max-width: 550px;
     position: relative;
     overflow: hidden;
+    transition: 0.2s;
 }
 
 
@@ -403,6 +407,45 @@ div, section {
     color: var(--color-slate-500);
 }
 
+/* full screen gallery image styles */
+
+.gallery-image-fullscreen-container {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.gallery-image-fullscreen-background {
+    background-color: black;
+    opacity: 90%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.gallery-image-fullscreen-picture {
+    width: 90%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 100%;
+    display: flex;
+    position: absolute;
+    left: 68px;
+    height: 100%;
+    z-index: 1001;
+}
+
+.gallery-image-fullscreen-picture img {
+    margin-left: auto;
+    margin-right: auto;
+    background-size: cover;
+}
+
+/* full screen gallery image styles - end */
 
 .accordeon-section {
     background-color: var(--color-slate-50);
@@ -531,3 +574,4 @@ div, section {
     color: var(--color-slate-50);
     transition: 0.2s;
 }
+

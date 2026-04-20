@@ -8,6 +8,13 @@
     <script src="script.js"></script>
 </head>
 <body>
+    <section class="gallery-image-fullscreen-container">
+        <div class="gallery-image-fullscreen-picture">
+            <img class="gallery-image-fullscreen-picture-inner" src="https://picsum.photos/seed/ui-design/800/800" alt="">
+        </div>
+        <div class="gallery-image-fullscreen-background">
+        </div>
+    </section>
     <nav class="nav-bar">
         <div id="progress-bar">
             <div id="le-bar"></div>
@@ -108,13 +115,13 @@
         
            <div class="gallery-option-selections">
                 <div class="gallery-option-selections-container">
-                    <div class="gallery-category gallery-category-active">
+                    <div class="gallery-category gallery-category-active gallery-category-all">
                         Wszystkie
                     </div>
-                    <div class="gallery-category">
+                    <div class="gallery-category gallery-category-ships">
                         UI/UX
                     </div>
-                    <div class="gallery-category">
+                    <div class="gallery-category gallery-category-sights">
                         Branding
                     </div>
                 </div>
@@ -124,7 +131,7 @@
        
         <div class="gallery-image-container">
             <div class="gallery-picture-set-container">
-                <div class="gallery-image-container-inner">
+                <div class="gallery-image-container-inner starships-category">
                     <div class="gallery-image-wrapper">
                         <div class="gallery-image-picture-wrapper">
                             <picture>
@@ -148,7 +155,7 @@
                     </div>
                 </div>
                 
-                <div class="gallery-image-container-inner">
+                <div class="gallery-image-container-inner sights-category">
                     <div class="gallery-image-wrapper">
                         <div class="gallery-image-picture-wrapper">
                             <picture>
@@ -172,7 +179,7 @@
                     </div>
                 </div>
                 
-                <div class="gallery-image-container-inner">
+                <div class="gallery-image-container-inner starships-category" >
                     <div class="gallery-image-wrapper">
                         <div class="gallery-image-picture-wrapper">
                             <picture>
@@ -249,5 +256,7 @@
             © 2024 ModernUI Showcase. Wszystkie prawa zastrzeżone.
         </div>
     </footer>
+
+   
 </body>
 </html>
