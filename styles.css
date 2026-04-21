@@ -1,5 +1,6 @@
 :root {
     --mobile-margin: 5px;
+    --nav-margin: 15px;
     --general-margin: 15px;
     --color-indigo-600: oklch(51.1% 0.262 276.966);
     --color-slate-600: oklch(44.6% 0.043 257.281);
@@ -11,6 +12,7 @@
     --color-slate-50: oklch(98.4% 0.003 247.858);
     --color-slate-200: oklch(92.9% 0.013 255.508);
     --color-slate-600: oklch(44.6% 0.043 257.281);
+    --color-indigo-700: oklch(45.7% 0.24 277.023);
     --color-indigo-filter: brightness(0) saturate(100%) invert(26%) sepia(82%) saturate(6988%) hue-rotate(247deg) brightness(98%) contrast(97%);
     --color-filter-image: rgba(79, 57, 246, 0.3);
     --gallery-image-radius: 30px;
@@ -65,7 +67,18 @@ div, section {
     margin-right: var(--general-margin);
     align-items: center;
     justify-content: space-between;
+    display: none;
 }
+
+.nav-inner-bar-logo {
+    display: flex;
+    justify-content: space-between;
+    margin-right: var(--nav-margin);
+    margin-left: var(--nav-margin);
+    margin-top: var(--nav-margin);
+}
+
+
 
 .logo {
     display: flex;
@@ -84,25 +97,40 @@ div, section {
     font-weight: bolder;
 }
 
-.nav-buttons {
+.nav-buttons-mobile {
     gap: 30px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    margin-left: var(--nav-margin);
+    margin-right: var(--nav-margin);
+    margin-top: var(--nav-margin);
+    font-weight: bold;
+    display: none;
 }
 
-.nav-buttons a {
+.nav-buttons-mobile-active {
+    display: flex;
+}
+
+.nav-buttons-mobile a {
     color: var(--color-slate-600);
     text-decoration: none;
 }
 
-.nav-buttons button {
+.nav-buttons-mobile-line {
+    height: 1px;
+    /*background-color: var(--color-slate-500); */
+}
+
+.nav-buttons-mobile button {
     color: var(--color-white);
     text-decoration: none;
     background-color: var(--color-indigo-600);
-    border-radius: 35px;
+    border-radius: 15px;
     padding: 15px  20px;
     border-width: 0;
     font-weight: bold;
+    font-size: 15px;
 }
 
 .main-hero {
@@ -154,10 +182,18 @@ div, section {
     color: var(--color-slate-500);
 }
 
+.hero-list-one img {
+    filter: var(--color-indigo-filter);
+}
+
 .hero-list-two li {
     margin-left: 30px;
     font-size: small;
     color: var(--color-slate-500);
+}
+
+.hero-list-two img {
+    filter: var(--color-indigo-filter);
 }
 
 .hero-list-one-data {
@@ -195,6 +231,9 @@ div, section {
     border-radius: 15px;
     border-width: 0;
     font-weight: bold;
+    max-width: 60%;
+    box-shadow: 0px 16px 18px 8px rgba(0,0,0,0.1);
+    margin-top: 10px;
 }
 
 .hero-button-right {
@@ -208,6 +247,8 @@ div, section {
     display: flex;
     align-items:center;
     gap: 5px;
+    max-width: 50%;
+    margin-bottom: 20px;
 }
 
 
@@ -235,8 +276,8 @@ div, section {
     position: absolute;
     background-color: var(--color-white);
     padding: 20px;
-    top: 45%;
-    left: 45%;
+    top: 35%;
+    left: 27%;
     border-radius: 10px;
     border-color: var(--color-white);
     border-width: 1px;
@@ -261,6 +302,9 @@ div, section {
     text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .video-text h1 {
@@ -292,7 +336,7 @@ div, section {
     justify-content: space-between;
     align-items: flex-end;
     flex-direction: column;
-    
+    align-items: flex-start;
 }
 
 .gallery-text p {
@@ -354,7 +398,7 @@ div, section {
 .gallery-picture-set-container {
     display: grid;
     gap:10px;
-    grid-template-columns: repeat(2, 1fr); /* how wide */
+    grid-template-columns: repeat(1, 1fr); /* how wide */
     grid-template-rows: repeat(3, 1fr); /* how long */
     align-items: center;
     justify-items: center;
@@ -459,6 +503,9 @@ div, section {
 
 .accordeon-toptext {
     margin-bottom: 45px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .accordion {
@@ -477,6 +524,8 @@ div, section {
     font-weight: bold;
     font-size: 20px;
 }
+
+
 
 .accordeon-inner {
     padding: 30px;
@@ -498,11 +547,10 @@ div, section {
     height: 1px;
     background-color: var(--color-slate-200);
 }
-  
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active-acc, .accordion:hover {
+
+
+.active-acc {
     color: var(--color-indigo-600);
-    
 }
   
   /* Style the accordion panel. Note: hidden by default */
@@ -567,6 +615,7 @@ div, section {
     display: flex;
     gap: 40px;
     transition: 0.2s;
+    margin-top: 20px;
 }
 
 .footer-info a {
@@ -578,6 +627,13 @@ div, section {
     text-decoration: none;
     color: var(--color-slate-50);
     transition: 0.2s;
+}
+
+.footer-copyright {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+    margin-top: 20px;
 }
 
 @media only screen and (min-width: 960px) {
@@ -600,6 +656,8 @@ div, section {
         opacity: 99%;
         padding-bottom: 15px;
     }
+
+
     .nav-inner-bar {
         display: flex;
         margin-top: 15px;
@@ -609,6 +667,9 @@ div, section {
         justify-content: space-between;
     }
     
+    .nav-inner-bar-mobile {
+        display: none;
+    }
     .logo {
         display: flex;
         align-items: center;
@@ -738,6 +799,16 @@ div, section {
         border-radius: 15px;
         border-width: 0;
         font-weight: bold;
+        max-width: 100%;
+        box-shadow: 0px 16px 18px 8px rgba(0,0,0,0.1);
+        margin-top: 0;
+        
+    }
+
+    .hero-button-left:hover
+    {
+        background-color: var(--color-indigo-700);
+        transition: 0.2s;
     }
     
     .hero-button-right {
@@ -751,8 +822,15 @@ div, section {
         display: flex;
         align-items:center;
         gap: 5px;
+        max-width: 100%;
+        margin-bottom: 0;
     }
-    
+
+
+    .hero-button-right:hover {
+        background-color: var(--color-slate-50);
+        transition: 0.2s;
+    }
     
     .hero-main-image-container {
         position: relative;
@@ -777,8 +855,8 @@ div, section {
         position: absolute;
         background-color: var(--color-white);
         padding: 20px;
-        top: 45%;
-        left: 45%;
+        top: 38%;
+        left: 36%;
         border-radius: 10px;
         border-color: var(--color-white);
         border-width: 1px;
@@ -834,6 +912,7 @@ div, section {
         justify-content: space-between;
         align-items: flex-end;
         flex-direction: row;
+        
     }
     
     .gallery-text p {
@@ -1000,8 +1079,12 @@ div, section {
     
     .accordeon-toptext {
         margin-bottom: 45px;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
-    
+
+
     .accordion {
         background-color: var(--color-white);
         color: #444;
@@ -1017,6 +1100,7 @@ div, section {
         border-radius: 10px;
         font-weight: bold;
         font-size: 20px;
+        
     }
     
     .accordeon-inner {
@@ -1107,6 +1191,7 @@ div, section {
         display: flex;
         gap: 40px;
         transition: 0.2s;
+        margin-top: 0px;
     }
     
     .footer-info a {
@@ -1118,5 +1203,12 @@ div, section {
         text-decoration: none;
         color: var(--color-slate-50);
         transition: 0.2s;
+    }
+
+    .footer-copyright {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+        margin-top: 0px;
     }
 }

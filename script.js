@@ -164,6 +164,19 @@ function primaryJSLoader()
         
       });
     }
+
+    //for handling the mobile button
+    const mobileButton = document.querySelector(".nav-mobile-menu");
+    if(!mobileButton) {
+        return
+    }
+
+    mobileButton.addEventListener("click", function() {
+        const menuPanel = document.querySelector(".nav-buttons-mobile");
+        console.log("e");
+        menuPanel.classList.toggle("nav-buttons-mobile-active");
+    })
+    
 }
 
 
