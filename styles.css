@@ -41,6 +41,14 @@ div, section {
     100% {transform: rotate(0deg);}
     }
 
+
+    
+/* Tooltip text */
+.tooltiptext {
+    visibility: hidden; /* Hidden by default */
+    display: none;
+}
+
 #progress-bar {
     width: 100%;
 }
@@ -644,6 +652,8 @@ div, section {
     #progress-bar {
         width: 100%;
     }
+    
+   
           
     #le-bar {
         width: 1%;
@@ -828,12 +838,38 @@ div, section {
         gap: 5px;
         max-width: 100%;
         margin-bottom: 0;
+        position: relative;
     }
 
 
     .hero-button-right:hover {
         background-color: var(--color-slate-50);
         transition: 0.2s;
+    }
+
+     /* Tooltip text */
+     .tooltiptext {
+        visibility: hidden; /* Hidden by default */
+        width: 130px;
+        background-color: black;
+        color: #ffffff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1; /* Ensure tooltip is displayed above content */
+        display: block;
+        bottom: 80px;
+        right: 3px;
+        transition: 0.5s;
+        max-width: 230px;
+    }
+    
+    /* Show the tooltip text on hover */
+    .hero-button-right:hover .tooltiptext {
+        visibility: visible;
+        transition: 0.5s;
+        
     }
     
     .hero-main-image-container {
@@ -1224,5 +1260,18 @@ div, section {
         margin-right: 0;
         max-width: 100%;
         margin-top: 0px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .gallery-picture-set-container {
+        display: grid;
+        gap:10px;
+        grid-template-columns: repeat(3, 1fr); /* how wide */
+        grid-template-rows: repeat(3, 1fr); /* how long */
+        align-items: center;
+        justify-items: center;
+        margin-top: 35px;
+        position: relative;
     }
 }
