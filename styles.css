@@ -408,10 +408,10 @@ div, section {
 
 .gallery-image {
     border-radius: var(--gallery-image-radius);
-    max-width: 550px;
+    max-width: 100%;
     position: relative;
     overflow: hidden;
-    transition: 0.2s;
+    text-align: center;
 }
 
 
