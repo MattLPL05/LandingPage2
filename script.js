@@ -39,13 +39,23 @@ function primaryJSLoader()
       }
 
       //progress scroll (on top of the nav bar)
-      window.onscroll = function() {myFunction()};
+      window.onscroll = function() {ScrollInteract()};
 
-      function myFunction() {
+      function ScrollInteract() {
         var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         var scrolled = (winScroll / height) * 100;
         document.getElementById("le-bar").style.width = scrolled + "%";
+        
+        const ReturnFrame = document.querySelector(".returnToTop-button-container");
+
+        if(scrolled > 10)
+        {
+          ReturnFrame.style.visibility = "visible";
+        }
+        else {
+          ReturnFrame.style.visibility = "hidden";
+        }
       }
 
 
@@ -175,6 +185,21 @@ function primaryJSLoader()
         const menuPanel = document.querySelector(".nav-buttons-mobile");
         console.log("e");
         menuPanel.classList.toggle("nav-buttons-mobile-active");
+    })
+
+    //for handlign the "return to top" button
+
+    const ReturnButton = document.querySelector(".returnToTop-button");
+
+    if(!ReturnButton) {
+      return
+    }
+
+    ReturnButton.addEventListener("click", function() {
+        window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     })
     
 }

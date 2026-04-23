@@ -14,6 +14,7 @@
     --color-slate-600: oklch(44.6% 0.043 257.281);
     --color-indigo-700: oklch(45.7% 0.24 277.023);
     --color-indigo-filter: brightness(0) saturate(100%) invert(26%) sepia(82%) saturate(6988%) hue-rotate(247deg) brightness(98%) contrast(97%);
+    --color-white-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(11deg) brightness(106%) contrast(101%);
     --color-filter-image: rgba(79, 57, 246, 0.3);
     --gallery-image-radius: 30px;
 }
@@ -51,6 +52,32 @@ div, section {
 
 #progress-bar {
     width: 100%;
+}
+
+.returnToTop-button-container {
+    background-color: var(--color-indigo-600);
+    border-radius: 100%;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    align-content: center;
+    top:90%;
+    right: 25px;
+    color: var(--color-white);
+    visibility: hidden;
+    z-index: 90;
+}
+
+.returnToTop-button-container:hover {
+   background-color: var(--color-indigo-700);
+}
+
+.returnToTop-button {
+    background: none;
+    border-width: 0;
+    fill: var(--color-white);
+    filter: var(--color-white-filter);
 }
       
 #le-bar {
@@ -298,7 +325,7 @@ div, section {
 .hero-main-image-center-images {
     display: flex;
     justify-content: center;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(11deg) brightness(106%) contrast(101%);;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(11deg) brightness(106%) contrast(101%);
 }
 
 .video-section {
