@@ -60,11 +60,13 @@ function GalleryImageHandler()
       element.addEventListener(`click`, event => {
         //console.log("e");
         try {
-          gallerycontainerArray[0].style.display = "block";
-          //replaces the old picture with the new picture
-          //console.log(imgsourse);
-          //imgsourse = picturesourse;
-          imgcontainer.querySelector("img").setAttribute("src", picturesourse);
+          const collectedPicture = element.getElementsByClassName("gallery-image");
+          var picture = Array.from(collectedPicture);
+          //Gets the fullscreen image path
+          const imgcontainer = document.querySelector(".gallery-image-fullscreen-picture")
+          const imgsourse = imgcontainer.querySelector("img").getAttribute("src");
+          const picturesourse = picture[0].getAttribute("src");
+  
           //makes the thing visible
           gallerycontainerArray[0].style.display = "block";
           //replaces the old picture with the new picture
