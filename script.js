@@ -1,101 +1,88 @@
 //https://www.w3schools.com/howto/howto_js_accordion.asp
 
-function primaryJSLoader()
+
+
+
+function AccordeonHandler()
 {
+  //accordeon
+  const acc = document.getElementsByClassName("accordion");
+  let i;
 
-    //accordeon
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-   /* for (i = 0; i < acc.length; i++) {
+  for (i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function() {
-        // Toggle between adding and removing the "active" class,
-       // to highlight the button that controls the panel 
-        this.classList.toggle("active-acc");
-
-        // Toggle between hiding and showing the active panel 
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-        panel.style.display = "none"; 
-        } else {
-        panel.style.display = "block";
-        }
+      this.classList.toggle("active-acc");
+      let panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
     });
-    } */
-
-    // code above works with a Display: none, and has no animation
-    //code below works with maxHeight, and is fully animated that way
-
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-          this.classList.toggle("active-acc");
-          var panel = this.nextElementSibling;
-          if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-          } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-          }
-        });
-      }
-
-      //progress scroll (on top of the nav bar)
-      window.onscroll = function() {ScrollInteract()};
-
-      function ScrollInteract() {
-        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrolled = (winScroll / height) * 100;
-        document.getElementById("le-bar").style.width = scrolled + "%";
-        
-        const ReturnFrame = document.querySelector(".returnToTop-button-container");
-
-        if(scrolled > 10)
-        {
-          ReturnFrame.style.visibility = "visible";
-        }
-        else {
-          ReturnFrame.style.visibility = "hidden";
-        }
-      }
+  }
+}
 
 
-      //gallery image handling
+function WindowScrolling()
+{
+   //progress scroll (on top of the nav bar)
+   window.onscroll = function() {ScrollInteract()};
 
-    var Pics = document.getElementsByClassName("gallery-image-container-inner");
-    var Piclogs = Array.from(Pics)
+   function ScrollInteract() {
+     const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+     const scrolled = (winScroll / height) * 100;
+     document.getElementById("le-bar").style.width = scrolled + "%";
+     
+     const ReturnFrame = document.querySelector(".returnToTop-button-container");
+
+     if(scrolled > 10)
+     {
+       ReturnFrame.style.visibility = "visible";
+     }
+     else {
+       ReturnFrame.style.visibility = "hidden";
+     }
+   }
+}
+
+function GalleryImageHandler()
+{
+    const Pics = document.getElementsByClassName("gallery-image-container-inner");
+    const Piclogs = Array.from(Pics)
 
 
-    var gallerycontainer = document.getElementsByClassName("gallery-image-fullscreen-container");
-    var gallerycontainerArray = Array.from(gallerycontainer);
+    const gallerycontainer = document.getElementsByClassName("gallery-image-fullscreen-container");
+    const gallerycontainerArray = Array.from(gallerycontainer);
 
     Piclogs.forEach(element => {
       //console.log(element);
       element.addEventListener(`click`, event => {
         //console.log("e");
-        var collectedPicture = element.getElementsByClassName("gallery-image");
-        var picture = Array.from(collectedPicture);
-        //Gets the fullscreen image path
-        var imgcontainer = document.querySelector(".gallery-image-fullscreen-picture")
-        var imgsourse = imgcontainer.querySelector("img").getAttribute("src");
-        var picturesourse = picture[0].getAttribute("src");
-
-        //makes the thing visible
-        gallerycontainerArray[0].style.display = "block";
-        //replaces the old picture with the new picture
-        //console.log(imgsourse);
-        //imgsourse = picturesourse;
-        imgcontainer.querySelector("img").setAttribute("src", picturesourse);
-        //console.log(imgsourse);
-        
-        
-
+        try {
+          gallerycontainerArray[0].style.display = "block";
+          //replaces the old picture with the new picture
+          //console.log(imgsourse);
+          //imgsourse = picturesourse;
+          imgcontainer.querySelector("img").setAttribute("src", picturesourse);
+          //makes the thing visible
+          gallerycontainerArray[0].style.display = "block";
+          //replaces the old picture with the new picture
+          //console.log(imgsourse);
+          //imgsourse = picturesourse;
+          imgcontainer.querySelector("img").setAttribute("src", picturesourse);
+          //console.log(imgsourse);
+        }
+        catch(error){
+          console.error(error);
+      }
       });
     });
 
     //for closing the gallery fullscreen picture
 
-    var Picsbac = document.getElementsByClassName("gallery-image-fullscreen-background");
-    var Piclogs2 = Array.from(Picsbac)
+    const Picsbac = document.getElementsByClassName("gallery-image-fullscreen-background");
+    const Piclogs2 = Array.from(Picsbac)
 
     Piclogs2.forEach(element => {
       //console.log(element);
@@ -107,12 +94,12 @@ function primaryJSLoader()
 
 
     //for handling gallery categories
-    var galleryCategory = document.getElementsByClassName("gallery-category");
-    var galleryCategoryArrr = Array.from(galleryCategory)
-    var starshipCat =  document.getElementsByClassName("starships-category");
-    var starshipcatArr = Array.from(starshipCat)
-    var sightCat = document.getElementsByClassName("sights-category");
-    var sightCatArr = Array.from(sightCat)
+    const galleryCategory = document.getElementsByClassName("gallery-category");
+    const galleryCategoryArrr = Array.from(galleryCategory)
+    const starshipCat =  document.getElementsByClassName("starships-category");
+    const starshipcatArr = Array.from(starshipCat)
+    const sightCat = document.getElementsByClassName("sights-category");
+    const sightCatArr = Array.from(sightCat)
 
     galleryCategoryArrr.forEach(element => {
       //console.log(element);
@@ -174,36 +161,45 @@ function primaryJSLoader()
         
       });
     }
+}
 
-    //for handling the mobile button
-    const mobileButton = document.querySelector(".nav-mobile-menu");
-    if(!mobileButton) {
-        return
-    }
 
-    mobileButton.addEventListener("click", function() {
-        const menuPanel = document.querySelector(".nav-buttons-mobile");
-        console.log("e");
-        menuPanel.classList.toggle("nav-buttons-mobile-active");
-    })
-
-    //for handlign the "return to top" button
-
-    const ReturnButton = document.querySelector(".returnToTop-button");
-
-    if(!ReturnButton) {
+function mobileButtoned()
+{
+  const mobileButton = document.querySelector(".nav-mobile-menu");
+  if(!mobileButton) {
       return
-    }
+  }
 
-    ReturnButton.addEventListener("click", function() {
-        window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    })
-    
+  mobileButton.addEventListener("click", function() {
+      const menuPanel = document.querySelector(".nav-buttons-mobile");
+      console.log("e");
+      menuPanel.classList.toggle("nav-buttons-mobile-active");
+  })
+}
+
+function ReturnerToTop()
+{
+  const ReturnButton = document.querySelector(".returnToTop-button");
+
+  if(!ReturnButton) {
+    return
+  }
+
+  ReturnButton.addEventListener("click", function() {
+      window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  })
 }
 
 
 
-document.addEventListener("DOMContentLoaded", primaryJSLoader);
+
+
+document.addEventListener("DOMContentLoaded", ReturnerToTop);
+document.addEventListener("DOMContentLoaded", mobileButtoned);
+document.addEventListener("DOMContentLoaded", GalleryImageHandler);
+document.addEventListener("DOMContentLoaded", WindowScrolling);
+document.addEventListener("DOMContentLoaded", AccordeonHandler);
