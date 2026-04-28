@@ -9,22 +9,22 @@
 </head>
 <body>
     <section class="gallery-image-fullscreen-container">
-        <div class="gallery-image-fullscreen-picture">
-            <img class="gallery-image-fullscreen-picture-inner" src="https://picsum.photos/seed/ui-design/800/800" alt="">
-        </div>
-        <div class="gallery-image-fullscreen-background">
-        </div>
+        <section class="gallery-image-fullscreen-picture">
+            <img class="gallery-image-fullscreen-picture-inner" src="https://picsum.photos/seed/ui-design/800/800" alt="current selected picture">
+        </section>
+        <section class="gallery-image-fullscreen-background">
+        </section>
     </section>
     <section>
-        <div class="returnToTop-button-container">
-            <button class="returnToTop-button"><img src="Arrow2.svg"></button>
-        </div>
+        <section class="returnToTop-button-container">
+            <button class="returnToTop-button"><img src="Arrow2.svg" alt="arrow image"></button>
+        </section>
     </section>
     <nav class="nav-bar">
         <div id="progress-bar" class="progress-bar">
             <div id="le-bar" class="main-progress-bar"></div>
           </div>
-        <div class="nav-inner-bar">
+        <section class="nav-inner-bar">
             <div class="logo">
                 <div class="logo-image">
                     M
@@ -38,8 +38,8 @@
                 <a href="#">FAQ</a>
                 <button>Kontakt</button>
             </div>
-        </div>
-        <div class="nav-inner-bar-mobile">
+        </section>
+        <section class="nav-inner-bar-mobile">
             <div class="nav-inner-bar-logo">
                 <div class="logo">
                     <div class="logo-image">
@@ -48,7 +48,7 @@
                     ModernUI
                     
                 </div>
-                <img class="nav-mobile-menu" src="MobileMenu.svg">
+                <img class="nav-mobile-menu" src="MobileMenu.svg" alt="mobile menu">
             </div>
             
             <div class="nav-buttons-mobile">
@@ -59,91 +59,89 @@
                 <a href="#">FAQ</a>
                 <button>Kontakt</button>
             </div>
-        </div>
+        </section>
        
     </nav>
     <section class="main-hero">
         <section class="hero-text">
             <div class="hero-small-bar">
-                <img class="hero-small-bar-image" src="topicon.svg">
+                <img class="hero-small-bar-image" src="topicon.svg" alt="a small icon to replesent a website layout">
                 <p>Nowoczesny Layout 2024</p>
             </div>
             <div class="hero-text-big">
-                <p>Projektuj <span class="hero-text-big-colored">przyszłość</span> interfejsów użytkownika</p>
+                <h1>Projektuj <span class="hero-text-big-colored">przyszłość</span> interfejsów użytkownika</h1>
             </div>
             <div class="hero-text-secondary">
                 <p>Tworzymy estetyczne i funkcjonalne rozwiązania, które zachwycają użytkowników na każdym urządzeniu. Nasze podejście łączy design z technologią.</p>
             </div>
 
-            <div class="hero-list-container">
+            <section class="hero-list-container">
+                <section class="hero-list-one-data">
+                    <img src="icon1.svg" alt="Checkmark icon">
+                    <p>Responsywność</p>
+                </section>
                 <ul class="hero-list-one">
-                    <div class="hero-list-one-data">
-                        <img src="icon1.svg">
-                        <p>Responsywność</p>
-                    </div>
-                   
                     <li>Mobile-first approach</li>
                     <li>Płynne przejścia między breakpointami</li>
                 </ul>
+                <section class="hero-list-two-data">
+                    <img src="icon1.svg" alt="Checkmark icon">
+                    <p>Dostępność (a11y)</p> 
+                </section>
                 <ul class="hero-list-two">
-                    <div class="hero-list-two-data">
-                        <img src="icon1.svg">
-                        <p>Dostępność (a11y)</p> 
-                    </div>
-                  
                     <li>Zgodność z WCAG 2.1</li>
                     <li>Obsługa klawiatury i czytników ekranui</li>
                 </ul>
-            </div>
+            </section>
             
 
-            <div class="hero-button-container">
+            <section class="hero-button-container">
                 <button class="hero-button-left">Rozpocznij projekt</button>
                 
-                <button class="hero-button-right"> <img src="InfoIcon.svg"> Szczegóły <span class="tooltiptext">Dowiedz się więcej o naszej technologii</span></button>
+                <button class="hero-button-right"> <img src="InfoIcon.svg" alt="Icon representing more information"> Szczegóły <span class="tooltiptext">Dowiedz się więcej o naszej technologii</span></button>
                 
                
-            </div>
+            </section>
         </section>
         <section class="hero-image">
-            <div class="hero-main-image-container">
-                <img class="hero-main-image" src="https://picsum.photos/seed/ui-design/800/800">
+            <section class="hero-main-image-container">
+                <img class="hero-main-image" src="https://picsum.photos/seed/ui-design/800/800" alt="big picture of a book and a cup filled with a hot liquid">
 
-                <div class="hero-main-image-center">
+                <section class="hero-main-image-center">
                     <div class="hero-main-image-center-images">
-                        <img src="heroicon1.svg">
-                        <img src="heroicon2.svg">
+                        <img src="heroicon1.svg" alt="a phone icon">
+                        <img src="heroicon2.svg" alt="a laptop icon">
                     </div>
                     <p>Multi-device Ready</p>
-                </div>
-            </div>
+                </section>
+            </section>
 
            
            
         </section>
     </section>
     <section class="video-section">
-        <div class="video-text">
-            <h1>Interaktywne Doświadczenie</h1>
+        <section class="video-text">
+            <h2>Interaktywne Doświadczenie</h2>
             <p>Nasze wideo odtwarza się automatycznie, gdy jest widoczne, zapewniając płynne przejście i oszczędność zasobów, gdy nie jest oglądane.</p>
-        </div>
-        <div class="video-container">
-            <video class="video"  controls autoplay muted>
+        </section>
+        <section class="video-container">
+            <video class="video"  controls autoplay muted playsinline>
                 <source src="Sample_Video_Header_1920x970.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-        </div>
+        </section>
 
     </section>
     <section class="gallery-section">
-        <div class="gallery-text">
-            <div>
-                <h1>Galeria Projektów</h1> 
+        <section class="gallery-text">
+            <section>
+                <h2>Galeria Projektów</h2> 
                 <p>Przeglądaj nasze najnowsze realizacje w estetycznym układzie siatki. Kliknij w obraz, aby zobaczyć szczegóły.</p>
-            </div>
+            </section>
         
-           <div class="gallery-option-selections">
-                <div class="gallery-option-selections-container">
+           <sectionclass="gallery-option-selections">
+                <section class="gallery-option-selections-container">
                     <div class="gallery-category gallery-category-active gallery-category-all">
                         Wszystkie
                     </div>
@@ -153,13 +151,13 @@
                     <div class="gallery-category gallery-category-sights">
                         widoki
                     </div>
-                </div>
-           </div>
+                </section>
+           </section>
         
-        </div>
+        </section>
        
-        <div class="gallery-image-container">
-            <div class="gallery-picture-set-container">
+        <section class="gallery-image-container">
+            <section class="gallery-picture-set-container">
                 <div class="gallery-image-container-inner starships-category">
                     <div class="gallery-image-wrapper">
                         <div class="gallery-image-picture-wrapper">
@@ -173,7 +171,7 @@
 
                         </div>
                         <div class="gallery-image-hover-background">
-                            <img class="gallery-image-hover" src="GalleryZoomIcon.svg">
+                            <img class="gallery-image-hover" src="GalleryZoomIcon.svg" alt="press to zoom">
                         </div>
                         
                     </div>
@@ -197,7 +195,7 @@
 
                         </div>
                         <div class="gallery-image-hover-background">
-                            <img class="gallery-image-hover" src="GalleryZoomIcon.svg">
+                            <img class="gallery-image-hover" src="GalleryZoomIcon.svg" alt="press to zoom">
                         </div>
                         
                     </div>
@@ -220,7 +218,7 @@
 
                         </div>
                         <div class="gallery-image-hover-background">
-                            <img class="gallery-image-hover" src="GalleryZoomIcon.svg">
+                            <img class="gallery-image-hover" src="GalleryZoomIcon.svg" alt="press to zoom">
                         </div>
                         
                     </div>
@@ -243,7 +241,7 @@
 
                         </div>
                         <div class="gallery-image-hover-background">
-                            <img class="gallery-image-hover" src="GalleryZoomIcon.svg">
+                            <img class="gallery-image-hover" src="GalleryZoomIcon.svg" alt="press to zoom">
                         </div>
                         
                     </div>
@@ -267,7 +265,7 @@
 
                         </div>
                         <div class="gallery-image-hover-background">
-                            <img class="gallery-image-hover" src="GalleryZoomIcon.svg">
+                            <img class="gallery-image-hover" src="GalleryZoomIcon.svg" alt="press to zoom">
                         </div>
                         
                     </div>
@@ -291,7 +289,7 @@
 
                         </div>
                         <div class="gallery-image-hover-background">
-                            <img class="gallery-image-hover" src="GalleryZoomIcon.svg">
+                            <img class="gallery-image-hover" src="GalleryZoomIcon.svg" alt="press to zoom">
                         </div>
                         
                     </div>
@@ -302,16 +300,16 @@
                     </div>
                 </div>
                 
-            </div>  
-        </div>
+            </section>  
+        </section>
     </section>
     <section class="accordeon-section">
-        <div class="accordeon-toptext">
-            <h1>Często Zadawane Pytania</h1>
+        <section class="accordeon-toptext">
+            <h2>Często Zadawane Pytania</h2>
             <p>Wszystko, co musisz wiedzieć o naszym procesie projektowym i technologiach.</p>
-        </div>
-        <div class="accordeon-container">
-            <div class="accordeon-inner">
+        </section>
+        <section class="accordeon-container">
+            <section class="accordeon-inner">
                 <button class="accordion">Jakie technologie wykorzystujecie w projektach?</button>
                 <div class="accordion-panel">
                     <p>Skupiamy się na najnowocześniejszych rozwiązaniach takich jak React, Tailwind CSS, Framer Motion oraz TypeScript. Dzięki temu nasze projekty są nie tylko estetyczne, ale również wydajne i łatwe w utrzymaniu.</p>
@@ -336,25 +334,25 @@
                 </div>
                 <div class="accordeon-line"></div>
 
-                </div>
+            </section>
             
-        </div>
+        </section>
     </section>
     <footer class="footer">
-        <div class="logo-footer">
+        <section class="logo-footer">
             <div class="logo-image">
                 M
             </div>
             ModernUI
-        </div>
-        <div class="footer-info">
+        </section>
+        <section class="footer-info">
            <a href="#">Privacy Policy</a> 
             <a href="#">Terms of Service</a>
             <a href="#">Cookies</a>
-        </div>
-        <div class="footer-copyright">
+        </section>
+        <section class="footer-copyright">
             © 2024 ModernUI Showcase. Wszystkie prawa zastrzeżone.
-        </div>
+        </section>
     </footer>
 
    

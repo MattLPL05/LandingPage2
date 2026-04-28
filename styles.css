@@ -26,6 +26,9 @@ body {
 
 html {
     margin: 0;
+    box-sizing: border-box;
+    text-wrap: pretty;
+    
 }
 
 div, section {
@@ -196,7 +199,7 @@ div, section {
 }
 
 .hero-text-big {
-    font-size: 50px;
+    font-size: 25px;
     font-weight: bold;
     text-wrap: wrap;
 }
@@ -233,6 +236,7 @@ div, section {
 
 .hero-list-one-data {
     display: flex;
+    margin-left: 25px;
 }
 .hero-list-one-data p {
     margin-left: 5px;
@@ -240,10 +244,12 @@ div, section {
 }
 .hero-list-one-data img {
    color: var(--color-indigo-600);
+   filter: var(--color-indigo-filter);
 }
 
 .hero-list-two-data {
     display: flex;
+    margin-left: 25px;
 }
 .hero-list-two-data p {
     margin-left: 5px;
@@ -251,6 +257,7 @@ div, section {
 }
 .hero-list-two-data img {
     color: var(--color-indigo-600);
+    filter: var(--color-indigo-filter);
 }
 
 .hero-button-container {
@@ -278,7 +285,7 @@ div, section {
     border-width: 1px;
     font-weight: bold;
     text-align: center;
-    align-items: center;
+    justify-content: center;
     display: flex;
     align-items:center;
     gap: 5px;
@@ -311,8 +318,9 @@ div, section {
     position: absolute;
     background-color: var(--color-white);
     padding: 20px;
-    top: 35%;
-    left: 27%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 10px;
     border-color: var(--color-white);
     border-width: 1px;
@@ -350,7 +358,8 @@ div, section {
 .video-container {
     margin-left: auto;
     margin-right: auto;
-    width: 90%;
+    width: auto;
+    max-width: 100%;
     padding-bottom: 75px;
 }
 
@@ -435,7 +444,7 @@ div, section {
     display: grid;
     gap:10px;
     grid-template-columns: repeat(1, 1fr); /* how wide */
-    grid-template-rows: repeat(3, 1fr); /* how long */
+    /*grid-template-rows: repeat(3, 1fr); /* how long */
     align-items: center;
     justify-items: center;
     margin-top: 35px;
@@ -774,7 +783,7 @@ div, section {
     }
     
     .hero-text-big {
-        font-size: 50px;
+        font-size: 35px;
         font-weight: bold;
         max-width: 90%;
         text-wrap: wrap;
@@ -804,6 +813,7 @@ div, section {
     
     .hero-list-one-data {
         display: flex;
+        margin-left: 25px;
     }
     .hero-list-one-data p {
         margin-left: 5px;
@@ -811,10 +821,12 @@ div, section {
     }
     .hero-list-one-data img {
        color: var(--color-indigo-600);
+       filter: var(--color-indigo-filter);
     }
     
     .hero-list-two-data {
         display: flex;
+        margin-left: 25px;
     }
     .hero-list-two-data p {
         margin-left: 5px;
@@ -822,6 +834,7 @@ div, section {
     }
     .hero-list-two-data img {
         color: var(--color-indigo-600);
+        filter: var(--color-indigo-filter);
     }
     
     .hero-button-container {
@@ -878,13 +891,14 @@ div, section {
         background-color: black;
         color: #ffffff;
         text-align: center;
-        padding: 5px 0;
+        padding: 10px;
         border-radius: 6px;
         position: absolute;
         z-index: 1; /* Ensure tooltip is displayed above content */
         display: block;
         bottom: 80px;
-        right: 3px;
+        right: 0px;
+        left: 0px;
         transition: visibility 0.5s;
         max-width: 230px;
     }
@@ -919,8 +933,9 @@ div, section {
         position: absolute;
         background-color: var(--color-white);
         padding: 20px;
-        top: 38%;
-        left: 36%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         border-radius: 10px;
         border-color: var(--color-white);
         border-width: 1px;
@@ -957,13 +972,17 @@ div, section {
         margin-right: auto;
         width: 90%;
         padding-bottom: 75px;
+        display: flex;
+        justify-content: center;
     }
     
     .video {
         height: 512px;
-        width: 100%;
+        width: auto;
+        max-width: 100%;
         border-radius: 30px;
         box-shadow: 0px 0px 12px 9px rgba(88, 80, 206, 0.25);
+        
     }
     
     .gallery-section {
@@ -1041,7 +1060,7 @@ div, section {
         display: grid;
         gap:10px;
         grid-template-columns: repeat(2, 1fr); /* how wide */
-        grid-template-rows: repeat(3, 1fr); /* how long */
+        /*grid-template-rows: repeat(3, 1fr); /* how long */
         align-items: center;
         justify-items: center;
         margin-top: 35px;
@@ -1289,7 +1308,7 @@ div, section {
         display: grid;
         gap:10px;
         grid-template-columns: repeat(3, 1fr); /* how wide */
-        grid-template-rows: repeat(3, 1fr); /* how long */
+       /* grid-template-rows: repeat(3, 1fr); /* how long */
         align-items: center;
         justify-items: center;
         margin-top: 35px;

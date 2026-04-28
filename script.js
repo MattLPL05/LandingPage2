@@ -61,7 +61,7 @@ function GalleryImageHandler()
         //console.log("e");
         try {
           const collectedPicture = element.getElementsByClassName("gallery-image");
-          var picture = Array.from(collectedPicture);
+          const picture = Array.from(collectedPicture);
           //Gets the fullscreen image path
           const imgcontainer = document.querySelector(".gallery-image-fullscreen-picture")
           const imgsourse = imgcontainer.querySelector("img").getAttribute("src");
